@@ -1,3 +1,7 @@
+/* Ejercicio 1
+•En el juego de golf, cada hoyo tiene un par, cuyo significado es el número promedio degolpes que se espera que haga un golfista para meter la bola en un hoyo y así completarel juego. Dependiendo de qué tan por encima o por debajo del par estén tus golpes, existeun apodo diferente.Escribe una función que reciba los argumentosparystrokesy devuelve la cadena correcta deacuerdo a la siguiente tabla que enumera los golpes en orden de prioridad; de arriba (más alto)a abajo (más bajo): */
+
+
 const names = [
     "Hole-in-one!",
     "Eagle",
