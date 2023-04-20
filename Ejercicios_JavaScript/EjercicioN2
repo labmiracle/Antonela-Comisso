@@ -1,0 +1,25 @@
+/*Ejercicio 2
+Escribe una función recursiva sum(arr, n) que retorne la suma de los primeros
+n elementos del arreglo arr*/
+
+
+let arr = [1, 2, 4, 7, 3, 10, 5], suma = 0;
+
+
+function sum(arr, n) {
+    if(arr.length < n){
+        console.log("Debe ingresar un numero menor a: ", arr.length)
+    } else {
+        index = n
+    while (n > 0) {
+        suma += arr[n-1];
+        n -= 1;
+    } 
+    console.log("La suma de los primeros", index, " elementos del arreglo es = ", suma) 
+
+    }
+     
+}
+
+
+sum(arr, 7)
