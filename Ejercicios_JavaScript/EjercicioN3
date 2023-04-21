@@ -12,7 +12,7 @@ la alturaDeseada.*/
 
 function calcularDiasCrecimiento(velocidadCrecimiento, velocidadDecrecimiento, alturaDeseada) {
     days = alturaDeseada / (velocidadCrecimiento - velocidadDecrecimiento)
-    console.log("Tardará ",days, "días en crecer ",alturaDeseada, " metros.")
+    return console.log("Tardará ",days, "días en crecer ",alturaDeseada, " metros.")
 }
 
 calcularDiasCrecimiento(5, 0, 100)

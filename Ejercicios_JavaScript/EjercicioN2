@@ -15,7 +15,7 @@ function sum(arr, n) {
         suma += arr[n-1];
         n -= 1;
     } 
-    console.log("La suma de los primeros", index, " elementos del arreglo es = ", suma) 
+    return console.log("La suma de los primeros", index, " elementos del arreglo es = ", suma) 
 
     }
      
