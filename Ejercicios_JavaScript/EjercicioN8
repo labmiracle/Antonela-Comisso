@@ -1,0 +1,15 @@
+/*Ejercicio 8
+• Escriba una función que pueda tomar cualquier número de argumentos y devuelva la suma
+de todos los argumentos*/
+
+function sumaN(...args) {
+    let suma=0;i=0;
+    while (i<args.length) {
+    suma+=args[i];
+    i+=1;
+    }
+    return console.log("La suma de todos los números es =", suma);
+
+}
+
+sumaN(1,2,3,4)

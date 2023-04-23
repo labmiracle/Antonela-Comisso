@@ -41,7 +41,7 @@ const carrito = {
         for (let producto of this.productos) {
              total += producto.precio * producto.unidades;
          }
-            return total;
+        return total;
     }
 }
 
