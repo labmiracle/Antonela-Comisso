@@ -1,0 +1,15 @@
+/*Ejercicio 11
+• Escriba una función llamada onlyUniques que pueda tomar cualquier cantidad de argumentos
+y devuelva un arreglo de solo los argumentos únicos*/
+
+let dic =  {a: 1, b: 2};
+let arr1 = [1,2]
+
+
+function onlyUniques(...args) {
+    let wordSet = new Set(args);
+    return console.log(wordSet)
+
+}
+
+onlyUniques(1, "2", 3, "2", arr1, dic, dic, 1, dic, arr1)
