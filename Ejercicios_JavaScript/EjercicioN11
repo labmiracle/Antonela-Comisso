@@ -8,7 +8,11 @@ let arr1 = [1,2]
 
 function onlyUniques(...args) {
     let wordSet = new Set(args);
-    return console.log(wordSet)
+    let unique = [];
+    for (let word of wordSet) {
+    unique.push(word);
+    }
+    return console.log(unique)
 
 }
 
