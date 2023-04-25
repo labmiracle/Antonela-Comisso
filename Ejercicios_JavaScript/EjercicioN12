@@ -1,0 +1,59 @@
+/*Ejercicio 12
+• Vamos a armar el juedo de ”Adivinar el número”. El juego consiste de los siguiente: La
+computadora genera un número aleatorio entre 1 y 10. Luego nos pide que adivinemos el
+número. Si el número que ingresamos es menor que el que genero la maquina nos muestra
+el mensaje ”El número es mayor”. Si el número que ingresamos es mayor nos muestra el
+mensaje ”El número es menor”. Cuando hayamos acertado el valor nos informa del fin del
+juego.
+• Agregue al juego anterior niveles de dificultad.*/
+
+const prompt = require("prompt-sync")();
+
+//Elección de nivel
+
+function niveles() {
+let nivel_elegido =  prompt('Elija el nivel de dificultad 1, 2 o 3: ');
+
+if (nivel_elegido == "1") {
+    nivel = 10;
+} else if (nivel_elegido == "2") {
+    nivel = 100;
+} else if (nivel_elegido == "3") {
+    nivel = 1000;
+} else {
+    console.log("Existen solo tres niveles.")
+    niveles();
+}
+}
+
+niveles()
+
+
+//Juego
+let num_ingresado =  prompt("Adivine el número que estoy pensando del 1 al " + nivel + " ");
+const num = Math.floor((Math.random() * nivel) + 1);
+    //console.log(num)
+
+adivinar(num_ingresado)
+
+function adivinar(num_ingresado) {
+    
+    if (num_ingresado < num) {
+            
+        let num_ingresado =  prompt("El número es mayor, vuelva a intentarlo: ");
+        adivinar(num_ingresado)
+         
+    } else if (num_ingresado > num) {
+            
+        let num_ingresado =  prompt("El número es menor, vuelva a intentarlo: ");
+        adivinar(num_ingresado);
+          
+    } else if (num_ingresado==num) {
+        console.log("Ganaste! Fin del juego.");
+     
+    }
+      
+    
+};  
+
+
