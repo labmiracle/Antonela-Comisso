@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "start": "node ./src/index.js",
+    "start": "node ./dist/index.js",
     "prestart": "npm install && npm run build"
   },
   "repository": {
