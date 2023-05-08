@@ -2,7 +2,7 @@
   "name": "typescript_project",
   "version": "1.0.0",
   "description": "This is a test project.",
-  "main": "index.js",
+  "main": "ejercicio_21.js",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "start": "node ./dist/index.js",
