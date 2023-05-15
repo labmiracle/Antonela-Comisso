@@ -1,9 +1,8 @@
-function padLeft(value: string, padding: any): any {
-
-    if (typeof value === 'string') {
+function padLeft(value: string, padding: string|number): any {
+    if (typeof padding === 'string') {
         return `${Array(padding + 1).join(' ')}${value}`;
     }
-    else if (typeof value === 'number') {
+    else if (typeof padding === 'number') {
         return padding + value;
     }
  // si padding es un numero, return `${Array(padding + 1).join(' ')}${value}`
