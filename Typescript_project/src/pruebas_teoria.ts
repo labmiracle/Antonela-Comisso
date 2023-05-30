@@ -1,9 +1,9 @@
-function greet(greeting: string, name: string): string {
-    return greeting + ' ' + name + '!';
+function saludo(saludoing: string, name: string): string {
+    return saludoing + ' ' + name + '!';
 }
-greet('Hello', 'Steve');
-//greet('Hi');
-//greet('Hi', 'Bill', 'Gates');
+saludo('Hello', 'Steve');
+//saludo('Hi');
+//saludo('Hi', 'Bill', 'Gates');
 
 //Tipo Arreglos
 var jobs: Array<string> = ['IBM', 'Microsoft', 'Google'];
