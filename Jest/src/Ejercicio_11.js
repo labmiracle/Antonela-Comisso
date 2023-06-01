@@ -18,4 +18,4 @@ function fizzBuzz(valor) {
 }
 
 module.exports = { fizzBuzz };
-console.log(fizzBuzz(15))
+
