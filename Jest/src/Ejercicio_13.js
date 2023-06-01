@@ -20,6 +20,6 @@ function ADN(cadena) {
     return newADN.join("")
 }
 
-console.log(ADN("AnvwrignpaingGAT ñksjgñskfjgTtttt"))
+ADN("AnvwrignpaingGAT ñksjgñskfjgTtttt")
 module.exports = { ADN };
 
