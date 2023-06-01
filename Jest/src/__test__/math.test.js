@@ -13,4 +13,3 @@ describe('juego de operaciones aritmeticas', () => {
         expect(div(1, 1)).toBe(1);
     });
 });
-405
