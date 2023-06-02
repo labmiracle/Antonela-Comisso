@@ -1,4 +1,4 @@
-const { selector } = require('../src/Ejercicio_15.js');
+const { selector } = require('../Ejercicio_15.js');
 
 describe('testeo de la función selector, Ej. 1.5', () => {
     test('si no hay letras repetidas', () => {

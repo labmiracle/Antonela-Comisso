@@ -1,4 +1,4 @@
-const { ADN } = require('../src/Ejercicio_13.js');
+const { ADN } = require('../Ejercicio_13.js');
 
 describe('testeo de la función ADN, Ej. 1.3', () => {
     test('si la cadena contiene A', () => {

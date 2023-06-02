@@ -1,4 +1,4 @@
-const { fizzBuzz } = require('../src/Ejercicio_11.js');
+const { fizzBuzz } = require('../Ejercicio_11.js');
 
 describe('testeo de la función fizzBuzz, Ej. 1.1', () => {
     test('si el número es divisible por 3', () => {

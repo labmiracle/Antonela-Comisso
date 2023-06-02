@@ -1,4 +1,4 @@
-const { sumaArr } = require('../src/Ejercicio_14.js');
+const { sumaArr } = require('../Ejercicio_14.js');
 
 describe('testeo de la función sumaArr, Ej. 1.4', () => {
     test('si el arreglo está vacio', () => {

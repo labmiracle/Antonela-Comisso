@@ -1,4 +1,4 @@
-const { bisiesto } = require('../src/Ejercicio_12.js');
+const { bisiesto } = require('../Ejercicio_12.js');
 
 describe('testeo de la función Bisiesto, Ej. 1.2', () => {
     test('si el número es divisible por 4', () => {

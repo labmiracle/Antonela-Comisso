@@ -1,4 +1,4 @@
-const { sum, sub, mul, div } = require('../src/math.js');
+const { sum, sub, mul, div } = require('../math.js');
 describe('juego de operaciones aritmeticas', () => {
     test('suma de numeros', () => {
         expect(sum(1, 1)).toBe(2);
