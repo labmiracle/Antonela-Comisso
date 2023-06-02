@@ -6,7 +6,7 @@ function selector(cadena) {
     let letras = cadena.toUpperCase()
     let arrletras = letras.split("")
     let soloespacios = Array.from(new Set(arrletras)) // si la cadena es una colección de SOLO espacios
-    console.log(soloespacios)
+
     let i = 0
     let j = arrletras.length - 1 //última letra index
     if (soloespacios[0] === " ") {
@@ -27,6 +27,6 @@ function selector(cadena) {
     }
 }
 
-console.log(selector("aA"))
+selector("aA")
 module.exports = { selector };
 
