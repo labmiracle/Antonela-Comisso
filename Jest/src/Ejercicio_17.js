@@ -46,7 +46,7 @@ function lookup(login, property) {
                     return users[i].likes;
                     break;
                 default:
-                    throw Error('/Could not find property/');
+                    throw Error('Could not find property');
 
 
             };
@@ -55,7 +55,7 @@ function lookup(login, property) {
 
 
     }
-    throw Error('/Could not find user/')
+    throw Error('Could not find user')
 };
 
 lookup('mfowler', 'noprop')
