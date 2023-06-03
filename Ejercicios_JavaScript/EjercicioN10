@@ -3,12 +3,11 @@
 y devuelva un solo arreglo que combine ambos (usando el operador ...)*/
 
 function combineTwoArrays(arg1, arg2) {
-    const combinado = [...arg1, ...arg2];
-    return console.log(combinado)
-
+  const combinado = [...arg1, ...arg2];
+  return console.log(combinado);
 }
 
-const peaks = ['Tallac', 'Ralston', 'Rose'];
-const canyons = ['Ward', 'Blackwood'];
+const peaks = ["Tallac", "Ralston", "Rose"];
+const canyons = ["Ward", "Blackwood"];
 
-combineTwoArrays(peaks, canyons)
+combineTwoArrays(peaks, canyons);

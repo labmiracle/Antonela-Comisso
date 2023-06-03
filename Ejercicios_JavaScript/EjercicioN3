@@ -8,11 +8,19 @@ velocidadDecrecimiento y alturaDeseada como números enteros positivos y
  devuelva el número de días que tardará la planta en medir 
 la alturaDeseada.*/
 
-
-
-function calcularDiasCrecimiento(velocidadCrecimiento, velocidadDecrecimiento, alturaDeseada) {
-    days = alturaDeseada / (velocidadCrecimiento - velocidadDecrecimiento)
-    return console.log("Tardará ",days, "días en crecer ",alturaDeseada, " metros.")
+function calcularDiasCrecimiento(
+  velocidadCrecimiento,
+  velocidadDecrecimiento,
+  alturaDeseada
+) {
+  days = alturaDeseada / (velocidadCrecimiento - velocidadDecrecimiento);
+  return console.log(
+    "Tardará ",
+    days,
+    "días en crecer ",
+    alturaDeseada,
+    " metros."
+  );
 }
 
-calcularDiasCrecimiento(5, 0, 100)
+calcularDiasCrecimiento(5, 0, 100);

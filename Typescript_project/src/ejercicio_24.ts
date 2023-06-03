@@ -10,17 +10,14 @@ interface Swimmer {
     swim(depth: number): void;
 } // agregar alias de tipo(s) aqui
 
+interface BirdLike extends EggLayer, Flyer {}
 
-interface BirdLike extends EggLayer, Flyer {
-}
+interface FishLike extends EggLayer, Swimmer {}
 
-interface FishLike extends EggLayer, Swimmer {
-}
-
-type Animal = Bird | Fish
+type Animal = Bird | Fish;
 
 class Bird implements BirdLike {
-    constructor(public species: string) { }
+    constructor(public species: string) {}
 
     layEggs(): void {
         console.log('Poniendo huevos de aves.');
@@ -32,7 +29,7 @@ class Bird implements BirdLike {
 }
 
 class Fish implements FishLike {
-    constructor(public species: string) { }
+    constructor(public species: string) {}
 
     layEggs(): void {
         console.log('Poniendo huevos de pescado.');
@@ -52,10 +49,8 @@ function getRandomAnimal() {
 function interrogateAnimal(animal = getRandomAnimal()) {
     if (animal instanceof Fish) {
         animal.swim(10); // se llama solo si es un pez
-    }
-    else if (animal instanceof Bird) {
+    } else if (animal instanceof Bird) {
         animal.fly(10); // se llama solo si es un pajaro
-
     }
 
     return animal.species;

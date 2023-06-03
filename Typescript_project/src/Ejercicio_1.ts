@@ -10,10 +10,8 @@ function myFunction(joyas: string, piedras: string): number {
         }
     }
     //console.log(joyaSet, piedraSet)
-    return num
+    return num;
 }
 
-
-
-console.assert(myFunction("aA", "aAAbbbb") === 3);
-console.assert(myFunction("z", "ZZ") === 0);
+console.assert(myFunction('aA', 'aAAbbbb') === 3);
+console.assert(myFunction('z', 'ZZ') === 0);

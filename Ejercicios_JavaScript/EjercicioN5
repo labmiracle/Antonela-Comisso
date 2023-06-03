@@ -4,24 +4,20 @@ function camelize(str) {
 }
 console.assert(camelize('Hola a todos que tal') === 'holaATodosQueTal');*/
 
-
-
 function camelize(str) {
-    if (typeof str !== "string") {
-        return console.log("Debe ingresar una variable de tipo string");
-    };
+  if (typeof str !== "string") {
+    return console.log("Debe ingresar una variable de tipo string");
+  }
 
-    const palabras = str.split(' ');
-    for (let i = 1; i < palabras.length; i++) {
-        palabras[0] = palabras[0].charAt(0).toLowerCase() +
-        palabras[0].slice(1).toLowerCase(); 
-        palabras[i] = palabras[i].charAt(0).toUpperCase() +
-        palabras[i].slice(1).toLowerCase();
-    };
-    console.log(palabras.join(""));
-    return palabras.join("");
+  const palabras = str.split(" ");
+  for (let i = 1; i < palabras.length; i++) {
+    palabras[0] =
+      palabras[0].charAt(0).toLowerCase() + palabras[0].slice(1).toLowerCase();
+    palabras[i] =
+      palabras[i].charAt(0).toUpperCase() + palabras[i].slice(1).toLowerCase();
+  }
+  console.log(palabras.join(""));
+  return palabras.join("");
 }
 
-
-console.assert(camelize('Hola a todos que tal') === 'holaATodosQueTal');
-
+console.assert(camelize("Hola a todos que tal") === "holaATodosQueTal");

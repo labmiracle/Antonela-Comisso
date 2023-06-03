@@ -1,6 +1,5 @@
-function greet(greeting = "hola"): string {
+function greet(greeting = 'hola'): string {
     return greeting.toUpperCase();
-
 }
 
 const defaultGreeting: string = greet();
