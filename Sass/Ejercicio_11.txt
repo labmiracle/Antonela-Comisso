@@ -1,0 +1,5 @@
+Ejercicio 1.1
+Explique en qué se diferencian el flujo de trabajo con CSS tradicional y con CSS preprocesado.
+
+En CSS tradicional las reglas de estilo se escriben en archivos CSS. Cada archivo contiene un conjunto de reglas que se aplican a los elementos HTML. Se utiliza una sintaxis básica en la que se definen selectores (estilos) y propiedades (cómo se verán) a los elementos HTML. CSS tradicional puede volverse complicado y desordenado cuando se trabaja con proyectos grandes. La reutilización de estilos puede ser difícil y puede haber problemas de mantenimiento a medida que el proyecto crece.
+Los CSS preprocesados implican el uso de lenguajes de preprocesamiento como Sass. Estos lenguajes agregan funcionalidades adicionales a CSS y se compilan en archivos CSS válidos. ofrecen características como variables, funciones, mixins y anidamiento de estilos. Estas características permiten una mayor modularidad y reutilización de estilos, lo que facilita el mantenimiento y la organización del código.
