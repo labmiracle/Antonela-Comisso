@@ -1,0 +1,9 @@
+@mixin bordes($width, $style, $color) {
+  border-width: $width;
+  border-style: $style;
+  border-color: $color;
+}
+
+.bordeprimario {
+  @include bordes(10px, solid, red);
+}
