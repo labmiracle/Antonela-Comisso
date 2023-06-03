@@ -1,0 +1,5 @@
+Ejercicio 1.2
+Explique por qué las variables son útiles. Puede consultar el siguiente enlace https://sasslang.com/documentation/variables.
+
+Las variables permiten almacenar y reutilizar valores en diferentes partes del código. Esto facilita el mantenimiento del código, ya que si necesitamos cambiar un valor, solo tenemos que actualizar la variable en lugar de buscar y modificar todas las instancias del valor en todo el código. Esto hace que el código sea más fácil de mantener y evita posibles errores introducidos por cambios manuales repetitivos.
+ Las variables permiten asignar nombres descriptivos a valores específicos utilizados en el código, facilitando la comprensión del código, mejoran la mantenibilidad y legibilidad del código, promueven la reutilización y la flexibilidad, facilitan el mantenimiento y la escalabilidad
