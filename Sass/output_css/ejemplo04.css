@@ -1,0 +1,10 @@
+.alert ul,
+.alert p,
+.warning ul,
+.warning p {
+  margin-right: 0;
+  margin-left: 0;
+  padding-bottom: 0;
+}
+
+/*# sourceMappingURL=ejemplo04.css.map */

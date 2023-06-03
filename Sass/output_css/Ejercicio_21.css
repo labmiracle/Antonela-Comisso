@@ -1,0 +1,18 @@
+.bordeprimario {
+  border-width: 10px;
+  border-style: solid;
+  border-color: red;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+  margin-left: -2px;
+  margin-right: 2em;
+}
+
+/*# sourceMappingURL=Ejercicio_21.css.map */

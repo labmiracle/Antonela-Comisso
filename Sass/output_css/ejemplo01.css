@@ -1,0 +1,9 @@
+/* Este comentario si, salvo en modo comprimido. */
+/* Tambien pueden contener interpolacion:
+* 1 + 1 = 2 */
+/*! Este comentario se va a incluir incluso en el modo comprimido. */
+p.sans {
+  font: Helvetica, sans-serif;
+}
+
+/*# sourceMappingURL=ejemplo01.css.map */
