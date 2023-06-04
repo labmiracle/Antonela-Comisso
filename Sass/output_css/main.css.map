@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../src/styles/_variables.scss","../src/styles/_herencia.scss","../src/styles/_mixins.scss","../src/styles/_nesting.scss"],"names":[],"mappings":"AAGA;EACE;;;ACJF;EACE;EACA;;AAEA;EAEE;;;AAIJ;EACE;;;AAGF;EAEE;;;ACEF;EAjBE;EACA;EACA;;AAMA;EACE;EAEE;EACA;;;ACZJ;EACE;EACA;EACA;;AAGF;EACE;;AAGF;EACE;EACA;EACA","file":"main.css"}

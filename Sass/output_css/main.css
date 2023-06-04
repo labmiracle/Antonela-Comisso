@@ -1,0 +1,46 @@
+.alert {
+  border: 1px solid rgba(198, 83, 140, 0.88);
+}
+
+.error, .error--serious {
+  border: 1px #f00;
+  background-color: #fdd;
+}
+.error--serious {
+  border-width: 3px;
+}
+
+.error:hover, .error--serious:hover {
+  background-color: #fee;
+}
+
+.error--serious {
+  border-width: 3px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+  margin-left: -2px;
+  margin-right: 2em;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=main.css.map */
