@@ -43,8 +43,6 @@ const masaTotal = massas.reduce(
   initialValue
 );
 
-console.log(masaTotal);
-
 //2. Obtener la altura total de todos los caracteres
 let alturas = characters.map(function (item, index) {
   return Number(item.height);
@@ -55,24 +53,18 @@ const alturaTotal = alturas.reduce(
   initialValue
 );
 
-console.log(alturaTotal);
-
 //3. Obtener el número total de caracteres en todos los nombres de los personajes
-
 let nombres = characters.map(function (item, index) {
   return item.name;
 });
 
-const caracteresTotal = nombres.reduce(
+const caracteres = nombres.reduce(
   (accumulator, currentValue) => accumulator + currentValue
 );
 
-console.log(caracteresTotal.split(" ").join("").length);
+let caracteresTotal = caracteres.split(" ").join("").length;
 
 //4. Obtener el número total de caracteres por color de ojos (pista: un mapa de color de ojos para contar)
-
 let colores = characters.map(function (item, index) {
   return item.eye_color.length;
 });
-
-console.log(colores);
