@@ -1,4 +1,4 @@
-//Función sort
+//Función every
 const characters = [
   {
     name: "Luke Skywalker",
@@ -30,30 +30,44 @@ const characters = [
   },
 ];
 
-//1. Ordenar por nombre
-
-let nombres = characters.map(function (item, index) {
-  return item.name;
+//1. ¿Todos los personajes tienen ojos azules?
+const eye_color = characters.map(function (item, index) {
+  return item.eye_color;
 });
 
-console.log(nombres.sort());
+function checkEye(eye) {
+  return eye === "blue";
+}
 
-//2. Ordenar por masa
+console.log(eye_color.every(checkEye));
+
+//2. ¿Todos los personajes tienen una masa superior a 40?
 let masas = characters.map(function (item, index) {
   return item.mass;
 });
+function checkMass(mass) {
+  return mass > 40;
+}
 
-console.log(masas.sort((a, b) => a - b));
-//3. Ordenar por altura
+console.log(masas.every(checkMass));
+
+//3. ¿Todos los caracteres son más bajos que 200?
 let alturas = characters.map(function (item, index) {
   return item.height;
 });
+function checkHeight(height) {
+  return height < 200;
+}
 
-console.log(alturas.sort((a, b) => a - b));
+console.log(alturas.every(checkHeight));
 
-//4. Ordenar por género
+//4. ¿Todos los personajes son hombres?
 let genero = characters.map(function (item, index) {
   return item.gender;
 });
 
-console.log(genero.sort());
+function checkGender(gender) {
+  return gender === "male";
+}
+
+console.log(genero.every(checkGender));
