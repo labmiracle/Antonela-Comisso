@@ -27,7 +27,7 @@ export default function App2() {
         <p>Ejercicio N°2</p>
       </div>
       <div className="card">
-        <button onClick={decrementar}>Decremenar</button>
+        <button onClick={decrementar}>Decrementar</button>
         <button onClick={incrementar}>Incrementar</button>
       </div>
       <p className="screen">STRING: {text}</p>
