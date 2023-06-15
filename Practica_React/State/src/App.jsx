@@ -15,7 +15,7 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>+</button>
       </div>
       <div>
-        <a>CONTADOR: {count}</a>
+        <a className="screen">CONTADOR: {count}</a>
       </div>
     </>
   );
