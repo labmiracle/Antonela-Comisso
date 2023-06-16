@@ -24,11 +24,10 @@ export default function App2() {
     <>
       <div>
         <p>Ejercicio N°2</p>
+        <Decrementar decrementar={decrementar} />
+        <Incrementar incrementar={incrementar} />
+        <Screen text={text} />
       </div>
-
-      <Decrementar decrementar={decrementar} />
-      <Incrementar incrementar={incrementar} />
-      <Screen text={text} />
     </>
   );
 }
