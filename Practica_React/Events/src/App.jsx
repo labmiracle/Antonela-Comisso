@@ -16,6 +16,7 @@ const App = () => {
 
   return (
     <div>
+      <div>Ejercicoi N°1</div>
       <button onClick={fetchJSONData}>Click to load JSON</button>
       <p className={color}>{JSON.stringify(jsonData)}</p>
     </div>
