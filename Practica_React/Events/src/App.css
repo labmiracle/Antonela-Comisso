@@ -5,6 +5,9 @@
   text-align: center;
 }
 
+.button {
+  background-color: gray;
+}
 
 .card {
   padding: 2em;

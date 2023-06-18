@@ -2,7 +2,7 @@ import "./App.css";
 import React, { useState } from "react";
 import axios from "axios";
 
-const App = () => {
+function App() {
   const [jsonData, setJsonData] = useState();
   const [color, setColor] = useState();
 
@@ -17,10 +17,12 @@ const App = () => {
   return (
     <div>
       <div>Ejercicoi N°1</div>
-      <button onClick={fetchJSONData}>Click to load JSON</button>
+      <button className="button" onClick={fetchJSONData}>
+        Click to load JSON
+      </button>
       <p className={color}>{JSON.stringify(jsonData)}</p>
     </div>
   );
-};
+}
 
 export default App;

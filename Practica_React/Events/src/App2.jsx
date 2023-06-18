@@ -14,8 +14,8 @@ function App2() {
     <>
       <div>Ejercicoi N°2</div>
       <div>
+        <div>Ingrese texto a pintar:</div>
         <input type="text" value={inputText} onChange={handleInputChange} />
-        <div></div>
         <text className={color}>{inputText}</text>
       </div>
     </>
