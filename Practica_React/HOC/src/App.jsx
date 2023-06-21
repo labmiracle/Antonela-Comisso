@@ -1,8 +1,17 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 
-// HOC que realiza la petición a la API
-const withApiData = (WrappedComponent) => {
+function App() {
+  return (
+    <div>
+      <PostListWithApiData />
+      <PostListWithApiData_1 postId={1} />
+    </div>
+  );
+}
+
+// HOC que llama a la API
+function withApiData(WrappedComponent) {
   return (props) => {
     const [data, setData] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
@@ -30,10 +39,9 @@ const withApiData = (WrappedComponent) => {
 
     return <WrappedComponent data={data} {...props} />;
   };
-};
+}
 
-// Componente que muestra el listado de publicaciones
-const PostList = ({ data }) => {
+function PostList({ data }) {
   return (
     <div>
       <h2>Lista de Publicaciones</h2>
@@ -46,10 +54,10 @@ const PostList = ({ data }) => {
       ))}
     </div>
   );
-};
+}
 
-// Componente que muestra los detalles de una publicación
-const PostDetails = ({ data, postId }) => {
+// Un post
+function PostDetails({ data, postId }) {
   const post = data.find((post) => post.id === postId);
 
   if (!post) {
@@ -63,20 +71,10 @@ const PostDetails = ({ data, postId }) => {
       <p>{post.body}</p>
     </div>
   );
-};
+}
 
-// Envuelve el componente de lista de publicaciones con el HOC
+// llamo al HOC
 const PostListWithApiData = withApiData(PostList);
 const PostListWithApiData_1 = withApiData(PostDetails);
-
-// Ejemplo de uso
-const App = () => {
-  return (
-    <div>
-      <PostListWithApiData />
-      <PostListWithApiData_1 postId={1} />
-    </div>
-  );
-};
 
 export default App;
