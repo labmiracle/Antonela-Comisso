@@ -16,7 +16,13 @@ function App() {
     <>
       <div>
         <div>Ingrese texto:</div>
-        <input type="text" value={inputText} onChange={handleInputChange} />
+        <input
+          type="text"
+          value={inputText}
+          onChange={(event) => {
+            setInputText(event.target.value);
+          }}
+        />
         <text>{word}</text>
       </div>
     </>
