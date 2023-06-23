@@ -10,4 +10,9 @@
   padding: 1.5em;
   border-style: double;
   border-color: black;
+  background-color: coral;
+}
+
+.pintar {
+  background-color: aquamarine;
 }
