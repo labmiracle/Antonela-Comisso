@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 
-const App4 = () => {
+function App4() {
   const [tareas, setTareas] = useState([]);
 
   useEffect(() => {
@@ -30,6 +30,6 @@ const App4 = () => {
       </ul>
     </div>
   );
-};
+}
 
 export default App4;
