@@ -1,10 +1,10 @@
-import { useState } from "react";
+import react from "react";
 
 import "./App.css";
 
 function App() {
-  const [inputText, setInputText] = useState("");
-  const [word, setWord] = useState("");
+  const [inputText, setInputText] = react.useState("");
+  const [word, setWord] = react.useState("");
 
   const handleInputChange = (event) => {
     setInputText(event.target.value);
@@ -16,13 +16,7 @@ function App() {
     <>
       <div>
         <div>Ingrese texto:</div>
-        <input
-          type="text"
-          value={inputText}
-          onChange={(event) => {
-            setInputText(event.target.value);
-          }}
-        />
+        <input type="text" value={inputText} onChange={handleInputChange} />
         <text>{word}</text>
       </div>
     </>
