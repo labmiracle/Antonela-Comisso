@@ -14,7 +14,7 @@ function addOnlyNums(...args) {
     }
   }
 
-  return console.log("La suma de todos los números es =", suma);
+  return suma;
 }
 
 addOnlyNums(1, 2, "hola", 4, "hi", 13);

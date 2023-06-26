@@ -4,7 +4,7 @@ y devuelva un solo arreglo que combine ambos (usando el operador ...)*/
 
 function combineTwoArrays(arg1, arg2) {
   const combinado = [...arg1, ...arg2];
-  return console.log(combinado);
+  return combinado;
 }
 
 const peaks = ["Tallac", "Ralston", "Rose"];

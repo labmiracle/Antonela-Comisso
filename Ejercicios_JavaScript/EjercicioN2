@@ -2,22 +2,10 @@
 Escribe una función recursiva sum(arr, n) que retorne la suma de los primeros
 n elementos del arreglo arr*/
 
-let arr = [1, 2, 4, 7, 3, 10, 5];
-
 function sum(arr, n) {
-  switch (true) {
-    case n > arr.length:
-      return console.log("n debe ser menor a :", arr.length);
-
-    case n === 1:
-      return arr[0];
-
-    case n === 0:
-      return 0;
-
-    case n <= arr.length:
-      return arr[n - 1] + sum(arr, n - 1);
+  if (n === 0) {
+    return 0;
   }
-}
 
-console.log(sum(arr, 3));
+  return arr[n - 1] + sum(arr, n - 1);
+}

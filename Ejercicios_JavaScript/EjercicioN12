@@ -33,7 +33,6 @@ let num_ingresado = prompt(
   "Adivine el número que estoy pensando del 1 al " + nivel + " "
 );
 const num = Math.floor(Math.random() * nivel + 1);
-//console.log(num)
 
 adivinar(num_ingresado);
 

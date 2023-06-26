@@ -9,7 +9,5 @@ function sumaN(...args) {
     suma += args[i];
     i += 1;
   }
-  return console.log("La suma de todos los números es =", suma);
+  return suma;
 }
-
-sumaN(1, 2, 3, 4);
