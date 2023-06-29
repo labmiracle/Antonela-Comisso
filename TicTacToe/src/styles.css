@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   margin: 20px;
   padding: 0;
 }
@@ -15,7 +15,8 @@ h1 {
 
 h2 {
   margin-top: 0;
-  font-size: 20px;
+  font-size: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 h3 {
@@ -55,28 +56,31 @@ ul {
 body {
   font-family: sans-serif;
   margin: 20px;
-  padding: 0;
+  padding: 50;
 }
 
 .square {
-  background: #cbea64;
+  background: #ebdede;
   border: 1px solid #090909;
   float: left;
   font-size: 24px;
   font-weight: bold;
   line-height: 34px;
   height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
+  margin-right: 1px;
+  margin-top: 1px;
   padding: 0;
+
   text-align: center;
   width: 34px;
+
 }
 
 .board-row:after {
   clear: both;
   content: '';
   display: table;
+
 }
 
 .status {

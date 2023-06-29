@@ -1,5 +1,5 @@
 {
-  "name": "vite-project",
+  "name": "craftingtable",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,8 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "minecraft": "^0.0.2",
-    "minecraft-items": "^0.4.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

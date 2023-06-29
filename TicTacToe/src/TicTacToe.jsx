@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./styles.css";
 
 function Square({ value, onSquareClick }) {
   return (
@@ -36,6 +37,8 @@ export default function Board() {
 
   return (
     <>
+      <h2>Tic Tac Toe</h2>
+      <h3>Please refresh page to restart</h3>
       <div className="status">{status}</div>
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
