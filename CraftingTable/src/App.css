@@ -67,8 +67,8 @@ body {
     font-weight: bold;
     line-height: 34px;
     height: 64px;
-    margin-right: 1px;
-    margin-top: 1px;
+    margin-right: -1px;
+    margin-top: -1px;
     padding: 0;
     border-radius: 5%;
     text-align: center;
@@ -91,13 +91,14 @@ body {
     font-weight: bold;
     line-height: 34px;
     height: 64px;
-    margin-right: 1px;
-    margin-top: 1px;
+    margin-right: -1px;
+    margin-top: -1px;
     padding: 0;
     border-radius: 5%;
     text-align: center;
     width: 64px;
-    margin-bottom: 20px;
+
+    margin-left: 400px;
 
 }
 

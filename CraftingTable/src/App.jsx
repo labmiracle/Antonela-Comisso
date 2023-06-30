@@ -3,10 +3,13 @@ import spriteSheet from "./itemMC.png";
 import "./App.css";
 
 export default function Board() {
-  //const [squares, setSquares] = useState(Array(9).fill(null));
-  const [itemSelected, setItemSelected] = useState();
+  const [itemSelected, setItemSelected] = useState([2, 9]);
   const [xCoord, setXcoord] = useState(Array(9).fill(2));
   const [yCoord, setYcoord] = useState(Array(9).fill(9));
+  const [result, setResult] = useState(false);
+
+  console.log(xCoord);
+  console.log(yCoord);
 
   function setArray(oldArray, positionInarray, replceFor) {
     const newArray = [...oldArray];
@@ -18,52 +21,88 @@ export default function Board() {
     let nextXcoord;
     let nextYcoord;
 
-    if (itemSelected === "COAL") {
+    if (itemSelected[0] === xCoord[i] && itemSelected[1] === yCoord[i]) {
       nextXcoord = 2;
-      nextYcoord = 4;
-    }
+      nextYcoord = 9;
+    } else {
+      if (itemSelected[0] === 0 && itemSelected[1] === 0) {
+        nextXcoord = 0;
+        nextYcoord = 0;
+      }
 
-    if (itemSelected === "ROCK") {
-      nextXcoord = 1;
-      nextYcoord = 1;
-    }
-    if (itemSelected === "STICK") {
-      nextXcoord = 1;
-      nextYcoord = 2;
+      if (itemSelected[0] === 1 && itemSelected[1] === 1) {
+        nextXcoord = 1;
+        nextYcoord = 1;
+      }
+      if (itemSelected[0] === 1 && itemSelected[1] === 2) {
+        nextXcoord = 1;
+        nextYcoord = 2;
+      }
+      if (itemSelected[0] === 6 && itemSelected[1] === 6) {
+        nextXcoord = 6;
+        nextYcoord = 6;
+      }
     }
 
     setXcoord(setArray(xCoord, i, nextXcoord));
     setYcoord(setArray(yCoord, i, nextYcoord));
+    checkCraft(xCoord, yCoord);
   }
 
-  function handleCoalclick() {
-    setItemSelected("COAL");
+  function handleIronclick() {
+    setItemSelected([0, 0]);
     return;
   }
 
   function handleStickclick() {
-    setItemSelected("STICK");
+    setItemSelected([1, 2]);
     return;
   }
 
   function handleRockclick() {
-    setItemSelected("ROCK");
+    setItemSelected([1, 1]);
     return;
   }
 
-  function setSquares(setX, setY) {
+  function handleBoxclick() {
+    setItemSelected([6, 6]);
+    return;
+  }
+
+  function clearSquares(setX, setY) {
     setXcoord(Array(9).fill(2));
     setYcoord(Array(9).fill(9));
   }
+
+  function checkCraft(xCoord, yCoord) {
+    const hachaXarray = [0, 0, 2, 2, 1, 2, 2, 2, 2];
+    const hachaYarray = [0, 0, 9, 9, 2, 9, 9, 9, 9];
+
+    let resultX = xCoord.every(
+      (element, index) => element === hachaXarray[index]
+    );
+    let resultY = yCoord.every(
+      (element, index) => element === hachaYarray[index]
+    );
+
+    if (resultX && resultY) {
+      setResult(true);
+    } else {
+      setResult(false);
+    }
+  }
+
   return (
     <>
       <h2>Crafting Table</h2>
-      <div className="status"> {itemSelected}</div>
+      <div className="status">
+        <Craftresult result={result} />
+      </div>
       <button
         className="button"
-        onClick={() => setSquares(Array(9).fill(null))}
+        onClick={() => clearSquares(Array(9).fill(null))}
       >
-        Clear Table
+        Clear Crafting Table
       </button>
       <div className="board-row">
         <ItemMC
@@ -116,29 +155,52 @@ export default function Board() {
           onSquareClick={() => handleClick(8)}
         />
       </div>
-      <div className="space"></div>
       ---------------------------------------------------
-      <h2>Inventory</h2>
+      <h2>Inventory and Selection</h2>
       <div className="board-row">
         <ItemMineCraft
-          frameXcoordinate={2}
-          frameYcoordinate={4}
-          onMCClick={() => handleCoalclick()}
+          frameXcoordinate={0}
+          frameYcoordinate={0}
+          onMCClick={() => handleIronclick()}
         />
-      </div>
-      <div className="board-row">
         <ItemMineCraft
           frameXcoordinate={1}
           frameYcoordinate={2}
           onMCClick={() => handleStickclick()}
         />
-      </div>
-      <div className="board-row">
         <ItemMineCraft
           frameXcoordinate={1}
           frameYcoordinate={1}
           onMCClick={() => handleRockclick()}
         />
+        <ItemMineCraft
+          frameXcoordinate={6}
+          frameYcoordinate={6}
+          onMCClick={() => handleBoxclick()}
+        />
+        <div className="status">
+          <ItemMineCraft
+            frameXcoordinate={itemSelected[0]}
+            frameYcoordinate={itemSelected[1]}
+            onMCClick={() => null}
+          />
+        </div>
+      </div>
+      ---------------------------------------------------
+      <h2>Posible Crafts</h2>
+      <div className="board-row">
+        <ItemMineCraft
+          frameXcoordinate={1}
+          frameYcoordinate={5}
+          onMCClick={() => null}
+        />
+        <div className="board-row">
+          <ItemMineCraft
+            frameXcoordinate={2}
+            frameYcoordinate={1}
+            onMCClick={() => null}
+          />
+        </div>
       </div>
     </>
   );
@@ -174,4 +236,28 @@ function ItemMC({ frameXcoordinate, frameYcoordinate, onSquareClick }) {
       <div style={spriteStyle}></div>
     </button>
   );
+}
+
+function Craftresult({ result }) {
+  if (result === true) {
+    return (
+      <div>
+        <ItemMC
+          frameXcoordinate={1}
+          frameYcoordinate={5}
+          onSquareClick={() => null}
+        />
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <ItemMC
+          frameXcoordinate={2}
+          frameYcoordinate={9}
+          onSquareClick={() => null}
+        />
+      </div>
+    );
+  }
 }
