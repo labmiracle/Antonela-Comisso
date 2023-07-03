@@ -6,10 +6,6 @@ export default function Board() {
   const [itemSelected, setItemSelected] = useState([2, 9]);
   const [xCoord, setXcoord] = useState(Array(9).fill(2));
   const [yCoord, setYcoord] = useState(Array(9).fill(9));
-  const [result, setResult] = useState(false);
-
-  console.log(xCoord);
-  console.log(yCoord);
 
   function setArray(oldArray, positionInarray, replceFor) {
     const newArray = [...oldArray];
@@ -46,7 +42,6 @@ export default function Board() {
 
     setXcoord(setArray(xCoord, i, nextXcoord));
     setYcoord(setArray(yCoord, i, nextYcoord));
-    checkCraft(xCoord, yCoord);
   }
 
   function handleIronclick() {
@@ -72,7 +67,10 @@ export default function Board() {
   function clearSquares(setX, setY) {
     setXcoord(Array(9).fill(2));
     setYcoord(Array(9).fill(9));
+    setResult(false);
   }
+
+  let response = checkCraft(xCoord, yCoord);
 
   function checkCraft(xCoord, yCoord) {
     const hachaXarray = [0, 0, 2, 2, 1, 2, 2, 2, 2];
@@ -85,10 +83,10 @@ export default function Board() {
       (element, index) => element === hachaYarray[index]
     );
 
-    if (resultX && resultY) {
-      setResult(true);
+    if (resultX === true && resultY === true) {
+      return true;
     } else {
-      setResult(false);
+      return false;
     }
   }
 
@@ -96,7 +94,7 @@ export default function Board() {
     <>
       <h2>Crafting Table</h2>
       <div className="status">
-        <Craftresult result={result} />
+        <Craftresult result={response} />
       </div>
       <button
         className="button"
