@@ -73,29 +73,34 @@ export default function Board() {
   let response = checkCraft(xCoord, yCoord);
 
   function checkCraft(xCoord, yCoord) {
-    const hachaXarray = [0, 0, 2, 2, 1, 2, 2, 2, 2];
-    const hachaYarray = [0, 0, 9, 9, 2, 9, 9, 9, 9];
-
-    let resultX = xCoord.every(
-      (element, index) => element === hachaXarray[index]
+    const hachaXarrays = [
+      [0, 0, 2, 2, 1, 2, 2, 2, 2],
+      [2, 0, 0, 2, 2, 1, 2, 2, 2],
+      [2, 2, 2, 0, 0, 2, 2, 1, 2],
+      [2, 2, 2, 2, 0, 0, 2, 2, 1],
+    ];
+    const hachaYarrays = [
+      [0, 0, 9, 9, 2, 9, 9, 9, 9],
+      [9, 0, 0, 9, 9, 2, 9, 9, 9],
+      [9, 9, 9, 0, 0, 9, 9, 2, 9],
+      [9, 9, 9, 9, 0, 0, 9, 9, 2],
+    ];
+    const matchXarray = hachaXarrays.filter((oneXarray) =>
+      xCoord.every((element, index) => element === oneXarray[index])
     );
-    let resultY = yCoord.every(
-      (element, index) => element === hachaYarray[index]
+
+    const matchYarray = hachaYarrays.filter((oneYarray) =>
+      yCoord.every((element, index) => element === oneYarray[index])
     );
 
-    if (resultX === true && resultY === true) {
+    if (matchXarray.length != 0 && matchYarray.length != 0) {
       return true;
-    } else {
-      return false;
     }
   }
 
   return (
     <>
       <h2>Crafting Table</h2>
-      <div className="status">
-        <Craftresult result={response} />
-      </div>
       <button
         className="button"
         onClick={() => clearSquares(Array(9).fill(null))}
@@ -118,6 +123,9 @@ export default function Board() {
           frameYcoordinate={yCoord[2]}
           onSquareClick={() => handleClick(2)}
         />
+        <div className="status">
+          <Craftresult result={response} />
+        </div>
       </div>
       <div className="board-row">
         <ItemMC
