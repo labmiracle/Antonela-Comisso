@@ -1,26 +1,15 @@
-import "./App.css";
-
 import React from "react";
+import "./App.css";
+import DuplicateChecker from "../components/Set_Ejercicio_N1";
+import UniqueElements from "../components/Set_Ejercicio_N2";
 
-const DuplicateChecker: React.FC = () => {
-  const numbers = [1, 2, 3, 4, 5, 1, 2];
-
-  const hasDuplicates = (): boolean => {
-    const numberSet = new Set(numbers);
-    return numbers.length !== numberSet.size;
-  };
-
+const App: React.FC = () => {
   return (
-    <div>
-      <h2>Verificación de duplicados</h2>
-      <p>Números: {numbers.join(", ")}</p>
-      {hasDuplicates() ? (
-        <p>Hay duplicados en el array!</p>
-      ) : (
-        <p>No hay duplicados en el array.</p>
-      )}
-    </div>
+    <>
+      <DuplicateChecker />
+      <UniqueElements />
+    </>
   );
 };
 
-export default DuplicateChecker;
+export default App;
