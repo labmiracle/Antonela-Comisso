@@ -73,28 +73,44 @@ class LinkedList<T> {
 
     return null;
   }
+
+  invert(): void {
+    let currentNode = this.head;
+    let prevNode: Node<T> | null = null;
+    let nextNode: Node<T> | null = null;
+
+    while (currentNode) {
+      nextNode = currentNode.next;
+      currentNode.next = prevNode;
+      prevNode = currentNode;
+      currentNode = nextNode;
+    }
+
+    this.tail = this.head;
+    this.head = prevNode;
+  }
 }
 
-const LinkedListEjercicioN1: React.FC = () => {
+const LinkedListEjercicioN2: React.FC = () => {
   const linkedList = new LinkedList<number>();
 
   linkedList.add(1);
   linkedList.add(2);
   linkedList.add(3);
+  linkedList.add(4);
 
-  linkedList.remove(2);
+  console.log("Original:", linkedList);
 
-  const node = linkedList.find(3);
+  linkedList.invert();
 
-  console.log(linkedList);
-  console.log(node);
+  console.log("Inverted:", linkedList);
 
   return (
     <div>
-      <h2>Listas enlazadas: Ejercicio N°1</h2> En la consola del navegador se
+      <h2>Listas enlazadas: Ejercicio N°2</h2> En la consola del navegador se
       pueden ver los resultados. Presione F12.
     </div>
   );
 };
 
-export default LinkedListEjercicioN1;
+export default LinkedListEjercicioN2;
