@@ -1,0 +1,53 @@
+/*Ejercicio 4
+a) Crea una función que reciba una frase como cadena y devuelva la palabra más larga:
+
+function palabraMasLarga(str) {
+}
+console.assert(palabraMasLarga('Erase una vez que se era') === 'Erase');
+
+b) Crea una función que reciba una cadena y lo devuelva con todas las palabras con su primera letra mayúscula
+
+function primeraMayuscula(str) {
+}
+console.assert(primeraMayuscula('En un lugar de la Mancha') === 'En Un Lugar De La Mancha'); */
+
+let frase = "Erase una vez que se era";
+
+function palabraMasLarga(str) {
+  let wordSet = new Set(frase.split(" "));
+  let palabras = [];
+  i = 0;
+  medida = 0;
+
+  for (let word of wordSet) {
+    palabras.push(word);
+    if (medida < palabras[i].length) {
+      palabramaslarga = palabras[i];
+      medida = palabras[i].length;
+      i += 1;
+    } else {
+      i += 1;
+    }
+  }
+  console.log(palabramaslarga);
+  return palabramaslarga;
+}
+
+console.assert(palabraMasLarga(frase) === "Erase");
+
+//
+
+function primeraMayuscula(str) {
+  const palabras = str.split(" ");
+
+  for (let i = 0; i < palabras.length; i++) {
+    palabras[i] =
+      palabras[i].charAt(0).toUpperCase() + palabras[i].slice(1).toLowerCase();
+  }
+  console.log(palabras.join(" "));
+  return palabras.join(" ");
+}
+
+console.assert(
+  primeraMayuscula("En un lugar de la Mancha") === "En Un Lugar De La Mancha"
+);

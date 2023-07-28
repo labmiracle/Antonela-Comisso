@@ -1,0 +1,20 @@
+/*Ejercicio 9
+• Escriba una función llamada addOnlyNums que pueda aceptar cualquier cantidad de argumentos
+(incluidos números o cadenas) y devuelva la suma de solo los números*/
+
+function addOnlyNums(...args) {
+  let suma = 0;
+  i = 0;
+  while (i < args.length) {
+    if (typeof args[i] == "number") {
+      suma += args[i];
+      i += 1;
+    } else {
+      i += 1;
+    }
+  }
+
+  return suma;
+}
+
+addOnlyNums(1, 2, "hola", 4, "hi", 13);
