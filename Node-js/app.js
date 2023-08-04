@@ -10,8 +10,14 @@ const server = http.createServer((req, res) => {
   } else if (urlPart === "about") {
     res.end("Acerca de Nosotros");
   } else {
-    res.end("Página no encontrada");
+    res.writeHead(404, { "Content-type": "text/html" });
+    res.end("404 Página no encontrada");
   }
+
+  console.log("Solicitud recibida:");
+  console.log("Método:", req.method);
+  console.log("URL:", req.url);
+  console.log("Encabezados:", req.headers);
 });
 
 const port = 3000;
