@@ -1,6 +1,10 @@
 const http = require("http");
 const fs = require("fs");
 const path = require("path");
+const serverConfig = require("./serverConfig");
+
+const port = serverConfig.port;
+const host = serverConfig.host;
 
 const server = http.createServer((req, res) => {
   const url = req.url;
@@ -48,8 +52,6 @@ function serveStaticFile(url, res) {
   });
 }
 
-const port = 3000;
-
-server.listen(port, () => {
+server.listen(port, host, () => {
   console.log(`Servidor escuchando en http://localhost:${port}`);
 });
